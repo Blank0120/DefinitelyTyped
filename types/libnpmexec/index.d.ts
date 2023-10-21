@@ -1,8 +1,3 @@
-// Type definitions for libnpmexec 2.0
-// Project: https://github.com/npm/libnpmexec#readme
-// Definitions by: jameswilddev <https://github.com/jameswilddev>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-
 /// <reference types="node" />
 
 declare function libnpmexec(opts: {
@@ -27,13 +22,13 @@ declare function libnpmexec(opts: {
     readonly yes?: boolean;
     readonly registry?: string;
 }): Promise<{
-    readonly code: number
-    readonly signal: string
-    readonly stdout: Buffer | string
-    readonly stderr: Buffer | string
-    readonly path: string
-    readonly event: string
-    readonly script: string
+    readonly code: number;
+    readonly signal: string;
+    readonly stdout: Buffer | string;
+    readonly stderr: Buffer | string;
+    readonly path: string;
+    readonly event: string;
+    readonly script: string;
 }>;
 
 export = libnpmexec;

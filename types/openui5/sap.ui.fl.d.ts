@@ -1,4 +1,4 @@
-// For Library Version: 1.116.0
+// For Library Version: 1.119.0
 
 declare module "sap/ui/fl/library" {}
 
@@ -7,7 +7,6 @@ declare module "sap/ui/fl/apply/api/ControlVariantApplyAPI" {
 
   /**
    * @since 1.67
-   * @experimental (since 1.67)
    *
    * Provides an API for applications to work with control variants. See also {@link sap.ui.fl.variants.VariantManagement}.
    */
@@ -1179,11 +1178,17 @@ declare module "sap/ui/fl/variants/VariantManagement" {
 
   export interface VariantManagement$CancelEventParameters {}
 
-  export type VariantManagement$CancelEvent = Event<VariantManagement$CancelEventParameters>;
+  export type VariantManagement$CancelEvent = Event<
+    VariantManagement$CancelEventParameters,
+    VariantManagement
+  >;
 
   export interface VariantManagement$InitializedEventParameters {}
 
-  export type VariantManagement$InitializedEvent = Event<VariantManagement$InitializedEventParameters>;
+  export type VariantManagement$InitializedEvent = Event<
+    VariantManagement$InitializedEventParameters,
+    VariantManagement
+  >;
 
   export interface VariantManagement$ManageEventParameters {
     /**
@@ -1208,7 +1213,10 @@ declare module "sap/ui/fl/variants/VariantManagement" {
     def?: string;
   }
 
-  export type VariantManagement$ManageEvent = Event<VariantManagement$ManageEventParameters>;
+  export type VariantManagement$ManageEvent = Event<
+    VariantManagement$ManageEventParameters,
+    VariantManagement
+  >;
 
   export interface VariantManagement$SaveEventParameters {
     /**
@@ -1249,7 +1257,10 @@ declare module "sap/ui/fl/variants/VariantManagement" {
     tile?: boolean;
   }
 
-  export type VariantManagement$SaveEvent = Event<VariantManagement$SaveEventParameters>;
+  export type VariantManagement$SaveEvent = Event<
+    VariantManagement$SaveEventParameters,
+    VariantManagement
+  >;
 
   export interface VariantManagement$SelectEventParameters {
     /**
@@ -1258,7 +1269,10 @@ declare module "sap/ui/fl/variants/VariantManagement" {
     key?: string;
   }
 
-  export type VariantManagement$SelectEvent = Event<VariantManagement$SelectEventParameters>;
+  export type VariantManagement$SelectEvent = Event<
+    VariantManagement$SelectEventParameters,
+    VariantManagement
+  >;
 }
 
 declare module "sap/ui/fl/write/_internal/fieldExtensibility/ABAPExtensibilityVariant" {
@@ -1512,8 +1526,6 @@ declare namespace sap {
     "sap/ui/fl/apply/api/SmartVariantManagementApplyAPI": undefined;
 
     "sap/ui/fl/apply/api/UI2PersonalizationApplyAPI": undefined;
-
-    "sap/ui/fl/Cache": undefined;
 
     "sap/ui/fl/changeHandler/Base": undefined;
 

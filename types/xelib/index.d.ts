@@ -1,9 +1,3 @@
-// Type definitions for non-npm package xelib 0.6
-// Project: https://github.com/z-edit/xelib
-// Definitions by: Alex Layton <https://github.com/awlayton>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// Minimum TypeScript Version: 3.4
-
 /**
  * xelib instance
  */
@@ -335,7 +329,8 @@ export type I<T> = T;
  * API for xelib wrapper
  */
 export interface XELib
-    extends I<typeof LoaderState>,
+    extends
+        I<typeof LoaderState>,
         I<typeof GameMode>,
         I<typeof ArchiveType>,
         I<typeof ElementType>,
@@ -343,7 +338,8 @@ export interface XELib
         I<typeof SmashType>,
         I<typeof ValueType>,
         I<typeof ConflictThis>,
-        I<typeof ConflictAll> {
+        I<typeof ConflictAll>
+{
     /**
      * Meta functions
      * @see {@link https://z-edit.github.io#/docs?t=Development%2FAPIs%2Fxelib%2FMeta}

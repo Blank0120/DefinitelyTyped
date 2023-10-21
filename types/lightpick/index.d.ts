@@ -1,10 +1,4 @@
-// Type definitions for Lightpick 1.4
-// Project: https://wakirin.github.io/Lightpick
-// Definitions by: Adam Kwiatek <https://github.com/akwiatek>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.4
-
-import moment = require('moment');
+import moment = require("moment");
 
 export = Lightpick;
 export as namespace Lightpick;
@@ -296,17 +290,17 @@ declare namespace Lightpick {
         type DayOfWeek = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
         type Orientation =
-            | 'auto'
-            | 'left'
-            | 'right'
-            | 'top'
-            | 'bottom'
-            | 'top left'
-            | 'top right'
-            | 'bottom left'
-            | 'bottom right';
+            | "auto"
+            | "left"
+            | "right"
+            | "top"
+            | "bottom"
+            | "top left"
+            | "top right"
+            | "bottom left"
+            | "bottom right";
 
-        type WeekdayStyle = 'long' | 'short' | 'narrow';
+        type WeekdayStyle = "long" | "short" | "narrow";
 
         interface Dropdowns {
             /**

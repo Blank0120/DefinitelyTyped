@@ -1,13 +1,6 @@
-// Type definitions for oracledb 3.1
-// Project: https://github.com/oracle/node-oracledb
-// Definitions by: Richard Natal <https://github.com/Bigous>
-//                 Connor Fitzgerald <https://github.com/connorjayfitzgerald>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 3.2
-
 /// <reference types="node" />
 
-import { Duplex, Readable } from 'stream';
+import { Duplex, Readable } from "stream";
 
 /**
  * @deprecated These types are no longer maintained. Please upgrade to oracledb version 4.
@@ -1197,12 +1190,14 @@ declare namespace OracleDB {
          *          "HIRE_DETAILS": { type: oracledb.DEFAULT }  // override fetchAsString or fetchAsBuffer
          *      }
          */
-        fetchInfo?: Record<
-            string,
-            {
-                type: number;
-            }
-        > | undefined;
+        fetchInfo?:
+            | Record<
+                string,
+                {
+                    type: number;
+                }
+            >
+            | undefined;
         /**
          * The maximum number of rows that are fetched by a query with connection.execute() when not using a ResultSet.
          * Rows beyond this limit are not fetched from the database. A value of 0 means there is no limit.
@@ -1700,7 +1695,8 @@ declare namespace OracleDB {
          */
         sessionCallback?:
             | string
-            | ((connection: Connection, requestedTag: string, callback: (error?: DBError) => void) => void) | undefined;
+            | ((connection: Connection, requestedTag: string, callback: (error?: DBError) => void) => void)
+            | undefined;
         /**
          * The number of statements to be cached in the statement cache of each connection in the pool.
          * This optional property overrides the oracledb.stmtCacheSize property.

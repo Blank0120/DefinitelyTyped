@@ -1,8 +1,3 @@
-// Type definitions for flowjs 2.13
-// Project: https://github.com/flowjs/flow.js
-// Definitions by: Martin Nuc <https://github.com/martinnuc>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-
 declare namespace flowjs {
     class Flow {
         constructor(options?: FlowOptions);
@@ -163,6 +158,6 @@ declare namespace flowjs {
     type CatchAllCallbackArguments = [Event];
 }
 // use namespace export like in flowjs/index.d.ts. Fix TS2306 "flowjs/index.d.ts not a module"
-// eslint-disable-next-line export-just-namespace
+// eslint-disable-next-line @definitelytyped/export-just-namespace
 export = flowjs;
 export as namespace flowjs;

@@ -1,12 +1,8 @@
-// Type definitions for node-notifier 5.4.0
-// Project: https://github.com/mikaelbr/node-notifier
-// Definitions by: Qubo <https://github.com/tkQubo>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-
 /// <reference types="node" />
 
+// eslint-disable-next-line @definitelytyped/no-declare-current-package
 declare module "node-notifier" {
-    import NotificationCenter = require('node-notifier/notifiers/notificationcenter');
+    import NotificationCenter = require("node-notifier/notifiers/notificationcenter");
     import NotifySend = require("node-notifier/notifiers/notifysend");
     import WindowsToaster = require("node-notifier/notifiers/toaster");
     import WindowsBalloon = require("node-notifier/notifiers/balloon");
@@ -16,19 +12,19 @@ declare module "node-notifier" {
         interface NodeNotifier extends NodeJS.EventEmitter {
             notify(
                 notification?: NotificationCenter.Notification,
-                callback?: NotificationCallback
+                callback?: NotificationCallback,
             ): NotificationCenter;
             notify(
                 notification?: WindowsToaster.Notification,
-                callback?: NotificationCallback
+                callback?: NotificationCallback,
             ): WindowsToaster;
             notify(
                 notification?: WindowsBalloon.Notification,
-                callback?: NotificationCallback
+                callback?: NotificationCallback,
             ): WindowsBalloon;
             notify(
                 notification?: NotifySend.Notification,
-                callback?: NotificationCallback
+                callback?: NotificationCallback,
             ): NotifySend;
             notify(notification?: Growl.Notification, callback?: NotificationCallback): Growl;
             notify(notification?: Notification, callback?: NotificationCallback): NodeNotifier;
@@ -55,15 +51,15 @@ declare module "node-notifier" {
             deliveredAt?: string | undefined;
             activationValue?: string | undefined;
             activationValueIndex?: string | undefined;
-          }
+        }
 
-          interface NotificationCallback {
+        interface NotificationCallback {
             (
-              err: Error | null,
-              response: string,
-              metadata?: NotificationMetadata,
+                err: Error | null,
+                response: string,
+                metadata?: NotificationMetadata,
             ): void;
-          }
+        }
 
         interface Option {
             withFallback?: boolean | undefined;
@@ -76,12 +72,16 @@ declare module "node-notifier" {
     export = nodeNotifier;
 }
 
+// eslint-disable-next-line @definitelytyped/no-declare-current-package
 declare module "node-notifier/notifiers/notificationcenter" {
-    import notifier = require('node-notifier');
+    import notifier = require("node-notifier");
 
     class NotificationCenter {
         constructor(option?: notifier.Option);
-        notify(notification?: NotificationCenter.Notification, callback?: notifier.NotificationCallback): NotificationCenter;
+        notify(
+            notification?: NotificationCenter.Notification,
+            callback?: notifier.NotificationCallback,
+        ): NotificationCenter;
     }
 
     namespace NotificationCenter {
@@ -117,8 +117,9 @@ declare module "node-notifier/notifiers/notificationcenter" {
     export = NotificationCenter;
 }
 
+// eslint-disable-next-line @definitelytyped/no-declare-current-package
 declare module "node-notifier/notifiers/notifysend" {
-    import notifier = require('node-notifier');
+    import notifier = require("node-notifier");
 
     class NotifySend {
         constructor(option?: notifier.Option);
@@ -144,8 +145,9 @@ declare module "node-notifier/notifiers/notifysend" {
     export = NotifySend;
 }
 
+// eslint-disable-next-line @definitelytyped/no-declare-current-package
 declare module "node-notifier/notifiers/toaster" {
-    import notifier = require('node-notifier');
+    import notifier = require("node-notifier");
 
     class WindowsToaster {
         constructor(option?: notifier.Option);
@@ -167,7 +169,7 @@ declare module "node-notifier/notifiers/toaster" {
             /**
              * Creates a shortcut <path> in the start menu which point to the
              * executable <application>, appID used for the notifications.
-            */
+             */
             install?: string | undefined;
         }
     }
@@ -175,8 +177,9 @@ declare module "node-notifier/notifiers/toaster" {
     export = WindowsToaster;
 }
 
+// eslint-disable-next-line @definitelytyped/no-declare-current-package
 declare module "node-notifier/notifiers/growl" {
-    import notifier = require('node-notifier');
+    import notifier = require("node-notifier");
 
     class Growl {
         constructor(option?: Growl.Option);
@@ -203,8 +206,9 @@ declare module "node-notifier/notifiers/growl" {
     export = Growl;
 }
 
+// eslint-disable-next-line @definitelytyped/no-declare-current-package
 declare module "node-notifier/notifiers/balloon" {
-    import notifier = require('node-notifier');
+    import notifier = require("node-notifier");
 
     class WindowsBalloon {
         constructor(option?: notifier.Option);
@@ -220,7 +224,7 @@ declare module "node-notifier/notifiers/balloon" {
             /** Wait with callback until user action is taken on notification */
             wait?: boolean | undefined;
             /** The notification type */
-            type?: 'info' | 'warn' | 'error' | undefined;
+            type?: "info" | "warn" | "error" | undefined;
         }
     }
 

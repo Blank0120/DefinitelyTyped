@@ -1,4 +1,4 @@
-// For Library Version: 1.116.0
+// For Library Version: 1.119.0
 
 declare module "sap/ui/webc/fiori/library" {
   /**
@@ -894,13 +894,13 @@ declare module "sap/ui/webc/fiori/Bar" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IBar, BarDesign } from "sap/ui/webc/fiori/library";
 
   import Control from "sap/ui/core/Control";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import { CSSSize } from "sap/ui/core/library";
 
@@ -972,7 +972,7 @@ declare module "sap/ui/webc/fiori/Bar" {
      * Creates a new subclass of class sap.ui.webc.fiori.Bar with name `sClassName` and enriches it with the
      * information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -1325,9 +1325,9 @@ declare module "sap/ui/webc/fiori/BarcodeScannerDialog" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import Event from "sap/ui/base/Event";
 
@@ -1385,7 +1385,7 @@ declare module "sap/ui/webc/fiori/BarcodeScannerDialog" {
      * Creates a new subclass of class sap.ui.webc.fiori.BarcodeScannerDialog with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -1593,7 +1593,10 @@ declare module "sap/ui/webc/fiori/BarcodeScannerDialog" {
     message?: string;
   }
 
-  export type BarcodeScannerDialog$ScanErrorEvent = Event<BarcodeScannerDialog$ScanErrorEventParameters>;
+  export type BarcodeScannerDialog$ScanErrorEvent = Event<
+    BarcodeScannerDialog$ScanErrorEventParameters,
+    BarcodeScannerDialog
+  >;
 
   export interface BarcodeScannerDialog$ScanSuccessEventParameters {
     /**
@@ -1607,18 +1610,21 @@ declare module "sap/ui/webc/fiori/BarcodeScannerDialog" {
     rawBytes?: object;
   }
 
-  export type BarcodeScannerDialog$ScanSuccessEvent = Event<BarcodeScannerDialog$ScanSuccessEventParameters>;
+  export type BarcodeScannerDialog$ScanSuccessEvent = Event<
+    BarcodeScannerDialog$ScanSuccessEventParameters,
+    BarcodeScannerDialog
+  >;
 }
 
 declare module "sap/ui/webc/fiori/DynamicSideContent" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import Control from "sap/ui/core/Control";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     SideContentFallDown,
@@ -1729,7 +1735,7 @@ declare module "sap/ui/webc/fiori/DynamicSideContent" {
      * Creates a new subclass of class sap.ui.webc.fiori.DynamicSideContent with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -2327,18 +2333,21 @@ declare module "sap/ui/webc/fiori/DynamicSideContent" {
     sideContentVisible?: boolean;
   }
 
-  export type DynamicSideContent$LayoutChangeEvent = Event<DynamicSideContent$LayoutChangeEventParameters>;
+  export type DynamicSideContent$LayoutChangeEvent = Event<
+    DynamicSideContent$LayoutChangeEventParameters,
+    DynamicSideContent
+  >;
 }
 
 declare module "sap/ui/webc/fiori/FilterItem" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IFilterItem, IFilterItemOption } from "sap/ui/webc/fiori/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -2390,7 +2399,7 @@ declare module "sap/ui/webc/fiori/FilterItem" {
      * Creates a new subclass of class sap.ui.webc.fiori.FilterItem with name `sClassName` and enriches it with
      * the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -2568,11 +2577,11 @@ declare module "sap/ui/webc/fiori/FilterItemOption" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IFilterItemOption } from "sap/ui/webc/fiori/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 
@@ -2623,7 +2632,7 @@ declare module "sap/ui/webc/fiori/FilterItemOption" {
      * Creates a new subclass of class sap.ui.webc.fiori.FilterItemOption with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -2721,7 +2730,7 @@ declare module "sap/ui/webc/fiori/FlexibleColumnLayout" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import Control from "sap/ui/core/Control";
 
@@ -2729,7 +2738,7 @@ declare module "sap/ui/webc/fiori/FlexibleColumnLayout" {
 
   import { FCLLayout } from "sap/ui/webc/fiori/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 
@@ -2797,7 +2806,7 @@ declare module "sap/ui/webc/fiori/FlexibleColumnLayout" {
      * Creates a new subclass of class sap.ui.webc.fiori.FlexibleColumnLayout with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -3344,14 +3353,17 @@ declare module "sap/ui/webc/fiori/FlexibleColumnLayout" {
     resize?: boolean;
   }
 
-  export type FlexibleColumnLayout$LayoutChangeEvent = Event<FlexibleColumnLayout$LayoutChangeEventParameters>;
+  export type FlexibleColumnLayout$LayoutChangeEvent = Event<
+    FlexibleColumnLayout$LayoutChangeEventParameters,
+    FlexibleColumnLayout
+  >;
 }
 
 declare module "sap/ui/webc/fiori/IllustratedMessage" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IButton } from "sap/ui/webc/main/library";
 
@@ -3359,7 +3371,7 @@ declare module "sap/ui/webc/fiori/IllustratedMessage" {
 
   import Control from "sap/ui/core/Control";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     IllustrationMessageType,
@@ -3431,7 +3443,7 @@ declare module "sap/ui/webc/fiori/IllustratedMessage" {
      * Creates a new subclass of class sap.ui.webc.fiori.IllustratedMessage with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -3821,7 +3833,7 @@ declare module "sap/ui/webc/fiori/MediaGallery" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import {
     IMediaGalleryItem,
@@ -3832,7 +3844,7 @@ declare module "sap/ui/webc/fiori/MediaGallery" {
 
   import Event from "sap/ui/base/Event";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -3901,7 +3913,7 @@ declare module "sap/ui/webc/fiori/MediaGallery" {
      * Creates a new subclass of class sap.ui.webc.fiori.MediaGallery with name `sClassName` and enriches it
      * with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -4506,11 +4518,17 @@ declare module "sap/ui/webc/fiori/MediaGallery" {
 
   export interface MediaGallery$DisplayAreaClickEventParameters {}
 
-  export type MediaGallery$DisplayAreaClickEvent = Event<MediaGallery$DisplayAreaClickEventParameters>;
+  export type MediaGallery$DisplayAreaClickEvent = Event<
+    MediaGallery$DisplayAreaClickEventParameters,
+    MediaGallery
+  >;
 
   export interface MediaGallery$OverflowClickEventParameters {}
 
-  export type MediaGallery$OverflowClickEvent = Event<MediaGallery$OverflowClickEventParameters>;
+  export type MediaGallery$OverflowClickEvent = Event<
+    MediaGallery$OverflowClickEventParameters,
+    MediaGallery
+  >;
 
   export interface MediaGallery$SelectionChangeEventParameters {
     /**
@@ -4519,14 +4537,17 @@ declare module "sap/ui/webc/fiori/MediaGallery" {
     item?: HTMLElement;
   }
 
-  export type MediaGallery$SelectionChangeEvent = Event<MediaGallery$SelectionChangeEventParameters>;
+  export type MediaGallery$SelectionChangeEvent = Event<
+    MediaGallery$SelectionChangeEventParameters,
+    MediaGallery
+  >;
 }
 
 declare module "sap/ui/webc/fiori/MediaGalleryItem" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import {
     IMediaGalleryItem,
@@ -4535,7 +4556,7 @@ declare module "sap/ui/webc/fiori/MediaGalleryItem" {
 
   import Control from "sap/ui/core/Control";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 
@@ -4597,7 +4618,7 @@ declare module "sap/ui/webc/fiori/MediaGalleryItem" {
      * Creates a new subclass of class sap.ui.webc.fiori.MediaGalleryItem with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -4801,13 +4822,13 @@ declare module "sap/ui/webc/fiori/NotificationAction" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { INotificationAction } from "sap/ui/webc/fiori/library";
 
   import { ButtonDesign } from "sap/ui/webc/main/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 
@@ -4859,7 +4880,7 @@ declare module "sap/ui/webc/fiori/NotificationAction" {
      * Creates a new subclass of class sap.ui.webc.fiori.NotificationAction with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -5147,14 +5168,17 @@ declare module "sap/ui/webc/fiori/NotificationAction" {
     targetRef?: HTMLElement;
   }
 
-  export type NotificationAction$ClickEvent = Event<NotificationAction$ClickEventParameters>;
+  export type NotificationAction$ClickEvent = Event<
+    NotificationAction$ClickEventParameters,
+    NotificationAction
+  >;
 }
 
 declare module "sap/ui/webc/fiori/NotificationListGroupItem" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IListItem, Priority } from "sap/ui/webc/main/library";
 
@@ -5165,7 +5189,7 @@ declare module "sap/ui/webc/fiori/NotificationListGroupItem" {
 
   import Event from "sap/ui/base/Event";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -5235,7 +5259,7 @@ declare module "sap/ui/webc/fiori/NotificationListGroupItem" {
      * Creates a new subclass of class sap.ui.webc.fiori.NotificationListGroupItem with name `sClassName` and
      * enriches it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -5879,18 +5903,24 @@ declare module "sap/ui/webc/fiori/NotificationListGroupItem" {
     item?: HTMLElement;
   }
 
-  export type NotificationListGroupItem$CloseEvent = Event<NotificationListGroupItem$CloseEventParameters>;
+  export type NotificationListGroupItem$CloseEvent = Event<
+    NotificationListGroupItem$CloseEventParameters,
+    NotificationListGroupItem
+  >;
 
   export interface NotificationListGroupItem$ToggleEventParameters {}
 
-  export type NotificationListGroupItem$ToggleEvent = Event<NotificationListGroupItem$ToggleEventParameters>;
+  export type NotificationListGroupItem$ToggleEvent = Event<
+    NotificationListGroupItem$ToggleEventParameters,
+    NotificationListGroupItem
+  >;
 }
 
 declare module "sap/ui/webc/fiori/NotificationListItem" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import {
     INotificationListItem,
@@ -5906,7 +5936,7 @@ declare module "sap/ui/webc/fiori/NotificationListItem" {
 
   import Control from "sap/ui/core/Control";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -5982,7 +6012,7 @@ declare module "sap/ui/webc/fiori/NotificationListItem" {
      * Creates a new subclass of class sap.ui.webc.fiori.NotificationListItem with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -6594,14 +6624,17 @@ declare module "sap/ui/webc/fiori/NotificationListItem" {
     item?: HTMLElement;
   }
 
-  export type NotificationListItem$CloseEvent = Event<NotificationListItem$CloseEventParameters>;
+  export type NotificationListItem$CloseEvent = Event<
+    NotificationListItem$CloseEventParameters,
+    NotificationListItem
+  >;
 }
 
 declare module "sap/ui/webc/fiori/Page" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import Control from "sap/ui/core/Control";
 
@@ -6609,7 +6642,7 @@ declare module "sap/ui/webc/fiori/Page" {
 
   import { CSSSize } from "sap/ui/core/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -6671,7 +6704,7 @@ declare module "sap/ui/webc/fiori/Page" {
      * Creates a new subclass of class sap.ui.webc.fiori.Page with name `sClassName` and enriches it with the
      * information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -7061,11 +7094,11 @@ declare module "sap/ui/webc/fiori/ProductSwitch" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IProductSwitchItem } from "sap/ui/webc/fiori/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import { AggregationBindingInfo } from "sap/ui/base/ManagedObject";
 
@@ -7125,7 +7158,7 @@ declare module "sap/ui/webc/fiori/ProductSwitch" {
      * Creates a new subclass of class sap.ui.webc.fiori.ProductSwitch with name `sClassName` and enriches it
      * with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -7239,13 +7272,13 @@ declare module "sap/ui/webc/fiori/ProductSwitchItem" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IProductSwitchItem } from "sap/ui/webc/fiori/library";
 
   import Event from "sap/ui/base/Event";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 
@@ -7307,7 +7340,7 @@ declare module "sap/ui/webc/fiori/ProductSwitchItem" {
      * Creates a new subclass of class sap.ui.webc.fiori.ProductSwitchItem with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -7624,14 +7657,17 @@ declare module "sap/ui/webc/fiori/ProductSwitchItem" {
 
   export interface ProductSwitchItem$ClickEventParameters {}
 
-  export type ProductSwitchItem$ClickEvent = Event<ProductSwitchItem$ClickEventParameters>;
+  export type ProductSwitchItem$ClickEvent = Event<
+    ProductSwitchItem$ClickEventParameters,
+    ProductSwitchItem
+  >;
 }
 
 declare module "sap/ui/webc/fiori/ShellBar" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IShellBarItem } from "sap/ui/webc/fiori/library";
 
@@ -7642,7 +7678,7 @@ declare module "sap/ui/webc/fiori/ShellBar" {
     IButton,
   } from "sap/ui/webc/main/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -7717,7 +7753,7 @@ declare module "sap/ui/webc/fiori/ShellBar" {
      * Creates a new subclass of class sap.ui.webc.fiori.ShellBar with name `sClassName` and enriches it with
      * the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -8977,7 +9013,10 @@ declare module "sap/ui/webc/fiori/ShellBar" {
     targetRef?: HTMLElement;
   }
 
-  export type ShellBar$CoPilotClickEvent = Event<ShellBar$CoPilotClickEventParameters>;
+  export type ShellBar$CoPilotClickEvent = Event<
+    ShellBar$CoPilotClickEventParameters,
+    ShellBar
+  >;
 
   export interface ShellBar$LogoClickEventParameters {
     /**
@@ -8986,7 +9025,10 @@ declare module "sap/ui/webc/fiori/ShellBar" {
     targetRef?: HTMLElement;
   }
 
-  export type ShellBar$LogoClickEvent = Event<ShellBar$LogoClickEventParameters>;
+  export type ShellBar$LogoClickEvent = Event<
+    ShellBar$LogoClickEventParameters,
+    ShellBar
+  >;
 
   export interface ShellBar$MenuItemClickEventParameters {
     /**
@@ -8995,7 +9037,10 @@ declare module "sap/ui/webc/fiori/ShellBar" {
     item?: HTMLElement;
   }
 
-  export type ShellBar$MenuItemClickEvent = Event<ShellBar$MenuItemClickEventParameters>;
+  export type ShellBar$MenuItemClickEvent = Event<
+    ShellBar$MenuItemClickEventParameters,
+    ShellBar
+  >;
 
   export interface ShellBar$NotificationsClickEventParameters {
     /**
@@ -9004,7 +9049,10 @@ declare module "sap/ui/webc/fiori/ShellBar" {
     targetRef?: HTMLElement;
   }
 
-  export type ShellBar$NotificationsClickEvent = Event<ShellBar$NotificationsClickEventParameters>;
+  export type ShellBar$NotificationsClickEvent = Event<
+    ShellBar$NotificationsClickEventParameters,
+    ShellBar
+  >;
 
   export interface ShellBar$ProductSwitchClickEventParameters {
     /**
@@ -9013,7 +9061,10 @@ declare module "sap/ui/webc/fiori/ShellBar" {
     targetRef?: HTMLElement;
   }
 
-  export type ShellBar$ProductSwitchClickEvent = Event<ShellBar$ProductSwitchClickEventParameters>;
+  export type ShellBar$ProductSwitchClickEvent = Event<
+    ShellBar$ProductSwitchClickEventParameters,
+    ShellBar
+  >;
 
   export interface ShellBar$ProfileClickEventParameters {
     /**
@@ -9022,18 +9073,21 @@ declare module "sap/ui/webc/fiori/ShellBar" {
     targetRef?: HTMLElement;
   }
 
-  export type ShellBar$ProfileClickEvent = Event<ShellBar$ProfileClickEventParameters>;
+  export type ShellBar$ProfileClickEvent = Event<
+    ShellBar$ProfileClickEventParameters,
+    ShellBar
+  >;
 }
 
 declare module "sap/ui/webc/fiori/ShellBarItem" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IShellBarItem } from "sap/ui/webc/fiori/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 
@@ -9082,7 +9136,7 @@ declare module "sap/ui/webc/fiori/ShellBarItem" {
      * Creates a new subclass of class sap.ui.webc.fiori.ShellBarItem with name `sClassName` and enriches it
      * with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -9297,14 +9351,17 @@ declare module "sap/ui/webc/fiori/ShellBarItem" {
     targetRef?: HTMLElement;
   }
 
-  export type ShellBarItem$ClickEvent = Event<ShellBarItem$ClickEventParameters>;
+  export type ShellBarItem$ClickEvent = Event<
+    ShellBarItem$ClickEventParameters,
+    ShellBarItem
+  >;
 }
 
 declare module "sap/ui/webc/fiori/SideNavigation" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import {
     ISideNavigationItem,
@@ -9313,7 +9370,7 @@ declare module "sap/ui/webc/fiori/SideNavigation" {
 
   import Control from "sap/ui/core/Control";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -9381,7 +9438,7 @@ declare module "sap/ui/webc/fiori/SideNavigation" {
      * Creates a new subclass of class sap.ui.webc.fiori.SideNavigation with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -9793,14 +9850,17 @@ declare module "sap/ui/webc/fiori/SideNavigation" {
     item?: ISideNavigationItem | ISideNavigationSubItem;
   }
 
-  export type SideNavigation$SelectionChangeEvent = Event<SideNavigation$SelectionChangeEventParameters>;
+  export type SideNavigation$SelectionChangeEvent = Event<
+    SideNavigation$SelectionChangeEventParameters,
+    SideNavigation
+  >;
 }
 
 declare module "sap/ui/webc/fiori/SideNavigationItem" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import {
     ISideNavigationItem,
@@ -9809,7 +9869,7 @@ declare module "sap/ui/webc/fiori/SideNavigationItem" {
 
   import Event from "sap/ui/base/Event";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -9864,7 +9924,7 @@ declare module "sap/ui/webc/fiori/SideNavigationItem" {
      * Creates a new subclass of class sap.ui.webc.fiori.SideNavigationItem with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -10241,20 +10301,23 @@ declare module "sap/ui/webc/fiori/SideNavigationItem" {
 
   export interface SideNavigationItem$ClickEventParameters {}
 
-  export type SideNavigationItem$ClickEvent = Event<SideNavigationItem$ClickEventParameters>;
+  export type SideNavigationItem$ClickEvent = Event<
+    SideNavigationItem$ClickEventParameters,
+    SideNavigationItem
+  >;
 }
 
 declare module "sap/ui/webc/fiori/SideNavigationSubItem" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { ISideNavigationSubItem } from "sap/ui/webc/fiori/library";
 
   import Event from "sap/ui/base/Event";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 
@@ -10306,7 +10369,7 @@ declare module "sap/ui/webc/fiori/SideNavigationSubItem" {
      * Creates a new subclass of class sap.ui.webc.fiori.SideNavigationSubItem with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -10531,18 +10594,21 @@ declare module "sap/ui/webc/fiori/SideNavigationSubItem" {
 
   export interface SideNavigationSubItem$ClickEventParameters {}
 
-  export type SideNavigationSubItem$ClickEvent = Event<SideNavigationSubItem$ClickEventParameters>;
+  export type SideNavigationSubItem$ClickEvent = Event<
+    SideNavigationSubItem$ClickEventParameters,
+    SideNavigationSubItem
+  >;
 }
 
 declare module "sap/ui/webc/fiori/SortItem" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { ISortItem } from "sap/ui/webc/fiori/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 
@@ -10591,7 +10657,7 @@ declare module "sap/ui/webc/fiori/SortItem" {
      * Creates a new subclass of class sap.ui.webc.fiori.SortItem with name `sClassName` and enriches it with
      * the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -10689,13 +10755,13 @@ declare module "sap/ui/webc/fiori/Timeline" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { ITimelineItem, TimelineLayout } from "sap/ui/webc/fiori/library";
 
   import { CSSSize } from "sap/ui/core/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -10751,7 +10817,7 @@ declare module "sap/ui/webc/fiori/Timeline" {
      * Creates a new subclass of class sap.ui.webc.fiori.Timeline with name `sClassName` and enriches it with
      * the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -11002,7 +11068,7 @@ declare module "sap/ui/webc/fiori/TimelineItem" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { ITimelineItem } from "sap/ui/webc/fiori/library";
 
@@ -11010,7 +11076,7 @@ declare module "sap/ui/webc/fiori/TimelineItem" {
 
   import Event from "sap/ui/base/Event";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -11064,7 +11130,7 @@ declare module "sap/ui/webc/fiori/TimelineItem" {
      * Creates a new subclass of class sap.ui.webc.fiori.TimelineItem with name `sClassName` and enriches it
      * with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -11432,14 +11498,17 @@ declare module "sap/ui/webc/fiori/TimelineItem" {
 
   export interface TimelineItem$NameClickEventParameters {}
 
-  export type TimelineItem$NameClickEvent = Event<TimelineItem$NameClickEventParameters>;
+  export type TimelineItem$NameClickEvent = Event<
+    TimelineItem$NameClickEventParameters,
+    TimelineItem
+  >;
 }
 
 declare module "sap/ui/webc/fiori/UploadCollection" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import Control from "sap/ui/core/Control";
 
@@ -11447,7 +11516,7 @@ declare module "sap/ui/webc/fiori/UploadCollection" {
 
   import { CSSSize } from "sap/ui/core/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import { ListMode } from "sap/ui/webc/main/library";
 
@@ -11501,7 +11570,7 @@ declare module "sap/ui/webc/fiori/UploadCollection" {
      * Creates a new subclass of class sap.ui.webc.fiori.UploadCollection with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -12223,7 +12292,10 @@ declare module "sap/ui/webc/fiori/UploadCollection" {
     dataTransfer?: DataTransfer;
   }
 
-  export type UploadCollection$DropEvent = Event<UploadCollection$DropEventParameters>;
+  export type UploadCollection$DropEvent = Event<
+    UploadCollection$DropEventParameters,
+    UploadCollection
+  >;
 
   export interface UploadCollection$ItemDeleteEventParameters {
     /**
@@ -12232,7 +12304,10 @@ declare module "sap/ui/webc/fiori/UploadCollection" {
     item?: HTMLElement;
   }
 
-  export type UploadCollection$ItemDeleteEvent = Event<UploadCollection$ItemDeleteEventParameters>;
+  export type UploadCollection$ItemDeleteEvent = Event<
+    UploadCollection$ItemDeleteEventParameters,
+    UploadCollection
+  >;
 
   export interface UploadCollection$SelectionChangeEventParameters {
     /**
@@ -12241,14 +12316,17 @@ declare module "sap/ui/webc/fiori/UploadCollection" {
     selectedItems?: any[];
   }
 
-  export type UploadCollection$SelectionChangeEvent = Event<UploadCollection$SelectionChangeEventParameters>;
+  export type UploadCollection$SelectionChangeEvent = Event<
+    UploadCollection$SelectionChangeEventParameters,
+    UploadCollection
+  >;
 }
 
 declare module "sap/ui/webc/fiori/UploadCollectionItem" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import {
     IUploadCollectionItem,
@@ -12259,7 +12337,7 @@ declare module "sap/ui/webc/fiori/UploadCollectionItem" {
 
   import Event from "sap/ui/base/Event";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -12311,7 +12389,7 @@ declare module "sap/ui/webc/fiori/UploadCollectionItem" {
      * Creates a new subclass of class sap.ui.webc.fiori.UploadCollectionItem with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -13073,32 +13151,44 @@ declare module "sap/ui/webc/fiori/UploadCollectionItem" {
 
   export interface UploadCollectionItem$FileNameClickEventParameters {}
 
-  export type UploadCollectionItem$FileNameClickEvent = Event<UploadCollectionItem$FileNameClickEventParameters>;
+  export type UploadCollectionItem$FileNameClickEvent = Event<
+    UploadCollectionItem$FileNameClickEventParameters,
+    UploadCollectionItem
+  >;
 
   export interface UploadCollectionItem$RenameEventParameters {}
 
-  export type UploadCollectionItem$RenameEvent = Event<UploadCollectionItem$RenameEventParameters>;
+  export type UploadCollectionItem$RenameEvent = Event<
+    UploadCollectionItem$RenameEventParameters,
+    UploadCollectionItem
+  >;
 
   export interface UploadCollectionItem$RetryEventParameters {}
 
-  export type UploadCollectionItem$RetryEvent = Event<UploadCollectionItem$RetryEventParameters>;
+  export type UploadCollectionItem$RetryEvent = Event<
+    UploadCollectionItem$RetryEventParameters,
+    UploadCollectionItem
+  >;
 
   export interface UploadCollectionItem$TerminateEventParameters {}
 
-  export type UploadCollectionItem$TerminateEvent = Event<UploadCollectionItem$TerminateEventParameters>;
+  export type UploadCollectionItem$TerminateEvent = Event<
+    UploadCollectionItem$TerminateEventParameters,
+    UploadCollectionItem
+  >;
 }
 
 declare module "sap/ui/webc/fiori/ViewSettingsDialog" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IFilterItem, ISortItem } from "sap/ui/webc/fiori/library";
 
   import Event from "sap/ui/base/Event";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -13159,7 +13249,7 @@ declare module "sap/ui/webc/fiori/ViewSettingsDialog" {
      * Creates a new subclass of class sap.ui.webc.fiori.ViewSettingsDialog with name `sClassName` and enriches
      * it with the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -13635,7 +13725,10 @@ declare module "sap/ui/webc/fiori/ViewSettingsDialog" {
 
   export interface ViewSettingsDialog$BeforeOpenEventParameters {}
 
-  export type ViewSettingsDialog$BeforeOpenEvent = Event<ViewSettingsDialog$BeforeOpenEventParameters>;
+  export type ViewSettingsDialog$BeforeOpenEvent = Event<
+    ViewSettingsDialog$BeforeOpenEventParameters,
+    ViewSettingsDialog
+  >;
 
   export interface ViewSettingsDialog$CancelEventParameters {
     /**
@@ -13664,7 +13757,10 @@ declare module "sap/ui/webc/fiori/ViewSettingsDialog" {
     filters?: any[];
   }
 
-  export type ViewSettingsDialog$CancelEvent = Event<ViewSettingsDialog$CancelEventParameters>;
+  export type ViewSettingsDialog$CancelEvent = Event<
+    ViewSettingsDialog$CancelEventParameters,
+    ViewSettingsDialog
+  >;
 
   export interface ViewSettingsDialog$ConfirmEventParameters {
     /**
@@ -13693,20 +13789,23 @@ declare module "sap/ui/webc/fiori/ViewSettingsDialog" {
     filters?: any[];
   }
 
-  export type ViewSettingsDialog$ConfirmEvent = Event<ViewSettingsDialog$ConfirmEventParameters>;
+  export type ViewSettingsDialog$ConfirmEvent = Event<
+    ViewSettingsDialog$ConfirmEventParameters,
+    ViewSettingsDialog
+  >;
 }
 
 declare module "sap/ui/webc/fiori/Wizard" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IWizardStep, WizardContentLayout } from "sap/ui/webc/fiori/library";
 
   import { CSSSize } from "sap/ui/core/library";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -13829,7 +13928,7 @@ declare module "sap/ui/webc/fiori/Wizard" {
      * Creates a new subclass of class sap.ui.webc.fiori.Wizard with name `sClassName` and enriches it with
      * the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */
@@ -14105,20 +14204,23 @@ declare module "sap/ui/webc/fiori/Wizard" {
     changeWithClick?: boolean;
   }
 
-  export type Wizard$StepChangeEvent = Event<Wizard$StepChangeEventParameters>;
+  export type Wizard$StepChangeEvent = Event<
+    Wizard$StepChangeEventParameters,
+    Wizard
+  >;
 }
 
 declare module "sap/ui/webc/fiori/WizardStep" {
   import {
     default as WebComponent,
     $WebComponentSettings,
-  } from "sap/ui/webc/common/WebComponent";
+  } from "sap/ui/core/webc/WebComponent";
 
   import { IWizardStep } from "sap/ui/webc/fiori/library";
 
   import Control from "sap/ui/core/Control";
 
-  import WebComponentMetadata from "sap/ui/webc/common/WebComponentMetadata";
+  import WebComponentMetadata from "sap/ui/core/webc/WebComponentMetadata";
 
   import {
     PropertyBindingInfo,
@@ -14180,7 +14282,7 @@ declare module "sap/ui/webc/fiori/WizardStep" {
      * Creates a new subclass of class sap.ui.webc.fiori.WizardStep with name `sClassName` and enriches it with
      * the information contained in `oClassInfo`.
      *
-     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.webc.common.WebComponent.extend}.
+     * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.core.webc.WebComponent.extend}.
      *
      * @returns Created class / constructor function
      */

@@ -1,9 +1,3 @@
-// Type definitions for non-npm package NewRelicBrowser 0.1212
-// Project: https://docs.newrelic.com/docs/browser/new-relic-browser/browser-agent-spa-api
-// Definitions by: Rene Hamburger <https://github.com/renehamburger>
-//                 Piotr Kubisa <https://github.com/piotrkubisa>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-
 /**
  * The browser and Single Page Application (SPA) APIs
  * allow you to customize and extend your browser monitoring.
@@ -70,7 +64,7 @@ declare namespace newrelic {
      *   values cannot be complex objects, only simple types such as strings and numbers.
      * @see https://docs.newrelic.com/docs/browser/new-relic-browser/browser-agent-spa-api/set-custom-attribute
      */
-    function setCustomAttribute(name: string, value: SimpleType): void;
+    function setCustomAttribute(name: string, value: SimpleType, persist?: boolean): void;
 
     /**
      * Allows selective ignoring of known errors that the Browser agent captures.
@@ -167,7 +161,7 @@ declare namespace newrelic {
          * @returns This method returns the same API object created by interaction().
          * @see https://docs.newrelic.com/docs/browser/new-relic-browser/browser-agent-spa-api/spa-get-context
          */
-        // eslint-disable-next-line no-unnecessary-generics
+        // eslint-disable-next-line @definitelytyped/no-unnecessary-generics
         getContext<T extends ContextObject = ContextObject>(callback: GetContextCallback<T>): this;
 
         /**
@@ -186,7 +180,7 @@ declare namespace newrelic {
          * @returns This method returns the same API object created by interaction().
          * @see https://docs.newrelic.com/docs/browser/new-relic-browser/browser-agent-spa-api/spa-on-end
          */
-        // eslint-disable-next-line no-unnecessary-generics
+        // eslint-disable-next-line @definitelytyped/no-unnecessary-generics
         onEnd<T extends ContextObject = ContextObject>(callback: GetContextCallback<T>): this;
 
         /**
